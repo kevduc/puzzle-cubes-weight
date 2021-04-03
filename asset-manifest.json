@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/kevduc/puzzle-cubes-weight/static/css/main.fcb476c9.chunk.css",
+    "main.js": "/kevduc/puzzle-cubes-weight/static/js/main.a3930584.chunk.js",
+    "main.js.map": "/kevduc/puzzle-cubes-weight/static/js/main.a3930584.chunk.js.map",
+    "runtime-main.js": "/kevduc/puzzle-cubes-weight/static/js/runtime-main.1be38286.js",
+    "runtime-main.js.map": "/kevduc/puzzle-cubes-weight/static/js/runtime-main.1be38286.js.map",
+    "static/js/2.5816aff6.chunk.js": "/kevduc/puzzle-cubes-weight/static/js/2.5816aff6.chunk.js",
+    "static/js/2.5816aff6.chunk.js.map": "/kevduc/puzzle-cubes-weight/static/js/2.5816aff6.chunk.js.map",
+    "index.html": "/kevduc/puzzle-cubes-weight/index.html",
+    "precache-manifest.af40587de7782bdbf36731565d124f69.js": "/kevduc/puzzle-cubes-weight/precache-manifest.af40587de7782bdbf36731565d124f69.js",
+    "service-worker.js": "/kevduc/puzzle-cubes-weight/service-worker.js",
+    "static/css/main.fcb476c9.chunk.css.map": "/kevduc/puzzle-cubes-weight/static/css/main.fcb476c9.chunk.css.map",
+    "static/js/2.5816aff6.chunk.js.LICENSE.txt": "/kevduc/puzzle-cubes-weight/static/js/2.5816aff6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1be38286.js",
+    "static/js/2.5816aff6.chunk.js",
+    "static/css/main.fcb476c9.chunk.css",
+    "static/js/main.a3930584.chunk.js"
+  ]
+}
