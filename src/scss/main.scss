@@ -1,0 +1,136 @@
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+$cubeSize: 5rem;
+$cubeSizeSm: 4rem;
+$cube-shelf-mx: 0.1rem;
+
+$selected-color: rgba(173, 216, 230, 0.5);
+$hover-color: rgba($selected-color, 0.3);
+
+$special-color: rgb(255, 213, 74);
+$special-heavier-color: rgb(253, 113, 89);
+$special-lighter-color: rgb(90, 247, 103);
+
+body {
+  margin: 0;
+  user-select: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.shelf {
+  height: $cubeSize;
+
+  .cube {
+    margin: 0 0 $cube-shelf-mx $cube-shelf-mx;
+  }
+}
+
+.scale {
+  @include rfs(12rem, margin-top);
+  @include rfs(15vw, height);
+  @include rfs(40rem, width);
+  border-bottom: 0.3rem solid black;
+}
+
+.pan {
+  border-bottom: 0.3rem solid black;
+  @include rfs(15rem, width);
+}
+
+.pan-base {
+  transition: background-color 0.1s ease-out;
+
+  & * {
+    transition: height 0.4s ease-out;
+  }
+
+  &-down {
+    @include rfs(1rem, height);
+  }
+
+  &-middle {
+    @include rfs(6rem, height);
+  }
+
+  &-up {
+    @include rfs(12rem, height);
+  }
+
+  &.selected {
+    // outline: 0.3rem solid $selected-color;
+    background-color: $selected-color;
+  }
+
+  &:hover:not(.selected) {
+    background-color: $hover-color;
+  }
+}
+
+.cube {
+  transition: background-color 0.1s ease-out;
+  --font-size: 3rem;
+
+  position: relative;
+  @include rfs($cubeSize, width);
+  @include rfs($cubeSize, height);
+  @include font-size(var(--font-size));
+  border: 0.2rem solid black;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+
+  .weight & {
+    @include font-size(calc(var(--font-size) * 2.2 / 3));
+
+    &.special {
+      background-color: $special-color;
+    }
+
+    &.special-heavier {
+      background-color: $special-heavier-color;
+    }
+
+    &.special-lighter {
+      background-color: $special-lighter-color;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    --font-size: 2rem;
+  }
+
+  @media screen and (max-width: 400px) {
+    --font-size: 1.5rem;
+  }
+}
+
+.cube-sm {
+  --font-size: 2rem;
+
+  @include rfs($cubeSizeSm, width);
+  @include rfs($cubeSizeSm, height);
+  @include font-size(var(--font-size));
+
+  .weight & {
+    @include font-size(calc(var(--font-size) * 1.5 / 2));
+  }
+
+  @media screen and (max-width: 800px) {
+    --font-size: 1.5rem;
+  }
+
+  @media screen and (max-width: 400px) {
+    --font-size: 1rem;
+  }
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
